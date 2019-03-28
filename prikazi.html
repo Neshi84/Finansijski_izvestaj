@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="skripta.js"></script>
+	<title>Finansijski izvestaj</title>
+	<link rel="icon" type="image/ico" href="http://www.dzbacpal.org.rs/favicon.ico" />
+</head>
+
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="" href="http://www.dzbacpal.org.rs/">
+						<img src="http://www.dzbacpal.org.rs/images/Logo.png" alt="Početna strana" style="height: 50px; float:left;">
+					</a>
+					<a class="navbar-brand" href="http://www.dzbacpal.org.rs/">Početna strana</a>
+				</div>
+				<ul class="nav navbar-nav">                  
+                    <li><a href="http://www.dzbacpal.org.rs/finansijski/finansijski_izvestaj.html">Arhiva</a></li>     
+                </ul>
+			</div>
+		</nav>
+		<div class="row container">			
+			<div  style="margin-bottom: 10px;" id="pretraga">
+				<h2 style="margin-bottom: 20px; text-align: center">Finansijski Izveštaji</h2>
+				<form class="form-inline" action="" method="post">
+					<div class="form-group">						
+						<label for="Datum"> Odaberite datum :  </label>
+						<input type="date" id="datum" name="datum" class="form-control" required />
+					</div>
+					<input type="submit" class="btn btn-primary" value="Prikaži" id="prikazi" name="prikazi" />
+				</form>
+			</div>
+			<hr>
+			<h4 id="poslednjiUnos" style="margin-bottom: 10px;">Poslednji unos: </h4>		
+			<div class="row">
+					
+				<div class="col-md-6" id="uplate">
+						
+				</div>
+
+				<div class="col-md-6" id="troskovi"></div>
+
+			</div>
+			
+			<div id="greskaContainer" ></div>
+			
+		</div>
+
+		<div class="row container">
+			<h4  style="margin-bottom: 10px;">Plaćanja po dobavljačima: </h4>
+			<div style="margin-top: 20px;" class="col-md" id="container-dobavljaci">
+					
+			</div>
+
+			
+		</div>
+
+	</div>	
+		
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="unos.js"></script>
+	<title>Unos finansijskog izvestaja</title>
+	<link rel="icon" type="image/ico" href="http://www.dzbacpal.org.rs/favicon.ico" />
+</head>
+
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="" href="http://www.dzbacpal.org.rs/">
+						<img src="http://www.dzbacpal.org.rs/images/Logo.png" alt="Početna strana"
+							style="height: 50px; float:left;">
+					</a>
+					<a class="navbar-brand" href="http://www.dzbacpal.org.rs/">Početna strana</a>
+				</div>
+
+			</div>
+		</nav>
+		<div class="row container">
+
+			<h2>Finansijski Izveštaji</h2>
+
+
+			<div id="greska"></div>
+
+			<div id="potvrda"></div>
+
+		</div>
+
+		<div class="row container">
+
+			<div class="col-md-4" id="container-uplate">
+				<h3>Prilivi</h3>
+				<form id="unosForma" action="create.php" method="post">
+					<div class="form-group">
+						<label for="stanje">Datum</label>
+						<input type="date" id="datum" class="form-control" name="datum">
+					</div>
+					<div class="form-group">
+						<label for="stanje">Predhodno stanje</label>
+						<input type="number" id="stanje" class="form-control" name="stanje" step=".01">
+					</div>
+					<div class="form-group">
+						<label for="stanje">Priliv od RFZO</label>
+						<input type="number" id="uplateRFZO" class="form-control" name="uplateRFZO" step=".01">
+					</div>
+					<div class="form-group">
+						<label for="participacija">Dom participacije:</label>
+						<input type="number" name="participacija" step=".01" class="form-control" id="participacija">
+					</div>
+					<div class="form-group">
+						<label for="apotekaDom">Apoteka učešće i participacija:</label>
+						<input type="number" name="apotekaDom" step=".01" class="form-control" id="apotekaDom">
+					</div>
+					<div class="form-group">
+						<label for="prenosPlate">Prenos za platu:</label>
+						<input type="number" name="prenosPlate" step=".01" class="form-control" id="prenosPlate">
+					</div>
+					<div class="form-group">
+						<label for="ostaleUplate">Ostali prilivi:</label>
+						<input type="number" name="ostaleUplate" step=".01" class="form-control" id="ostaleUplate">
+					</div>
+
+
+			</div>
+
+			<div class="col-md-4" id="container-placanja" >
+				<h3>Izvršena placanja</h3>
+
+				<div class="form-group">
+					<label for="plate">Plate:</label>
+					<input type="number" id="plate" class="form-control" name="plate" step=".01">
+				</div>
+				<div class="form-group">
+					<label for="jubilarne">Jubilarne:</label>
+					<input type="number" id="jubilarne" class="form-control" name="jubilarne" step=".01">
+				</div>
+				<div class="form-group">
+					<label for="otpremnine">Otpremnine</label>
+					<input type="number" id="otpremnine" class="form-control" name="otpremnine" step=".01">
+				</div>
+				<div class="form-group">
+					<label for="povratPlate">Povrat više treb. sred. za plate:</label>
+					<input type="number" name="povratPlate" step=".01" class="form-control" id="povratPlate">
+				</div>
+				<div class="form-group">
+					<label for="bolovanje">Bolovanje:</label>
+					<input type="number" name="bolovanje" step=".01" class="form-control" id="bolovanje">
+				</div>
+
+				<button type="submit" class="btn btn-primary">Sačuvaj</button>
+
+				</form>
+			</div>
+
+			<div class="col-md-4" id="containerTip" >
+				<h3>Unos utrošaka po dobavljačima</h3>
+				<form id="unosTipa">
+
+
+					<div class="form-group">
+
+						<label for="tip">Tip utroška</label>
+						<select class="form-control" id="tip"></select>
+
+					</div>
+
+					<div class="form-group ">
+						<label for="dobavljac">Dobavljač</label>
+						<input type="text" class="form-control" id="dobavljac" placeholder="Dobavljač">
+
+					</div>
+
+					<div class="form-group ">
+						<label for="iznos">Iznos</label>
+						<input type="number" class="form-control" id="iznos" placeholder="Iznos" step=".01">
+
+					</div>
+
+					<div class="form-group ">
+
+						<button type="submit" class="btn btn-primary">Sačuvaj</button>
+
+					</div>
+
+
+				</form>
+
+			</div>
+
+		</div>
+
+
+</body>
+
+</html>
